@@ -27,7 +27,7 @@ rm -rf /app &>>/tmp/expense.log
 echo $?
 
 Print_Task_Heading "Create App Directory"
-mkdir/app &>>/tmp/expense.log
+mkdir /app &>>/tmp/expense.log
 echo $?
 
 Print_Task_Heading "Download App content"
@@ -55,5 +55,5 @@ dnf install mysql -y &>>/tmp/expense.log
 echo $?
 
 Print_Task_Heading "Load Schema"
-mysql -h 172.31.87.179 -uroot -p{mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
+mysql -h 172.31.87.179 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
 echo $?
